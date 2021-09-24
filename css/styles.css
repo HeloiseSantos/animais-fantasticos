@@ -1,0 +1,16 @@
+/* Reseta css */
+html, body, section, div, h1, h2, h3, p, ul, li, dl, dt, dd, footer {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Estilos */
