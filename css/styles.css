@@ -221,3 +221,12 @@ body {
         margin-bottom: 0;
     }
 }
+
+/* Behavior */
+.js-tabcontent section {
+    display: none;
+}
+
+.js-tabcontent section.ativo {
+    display: block;
+}
