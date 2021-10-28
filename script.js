@@ -42,3 +42,33 @@ function initAccordion() {
 }
 
 initAccordion();
+
+function initSmoothScroll() {
+    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+
+    function scrollToSection(event) {
+        event.preventDefault();
+
+        const href = event.currentTarget.getAttribute('href');
+        const section = document.querySelector(href);
+
+        const topo = section.offsetTop;
+
+        section.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+        });
+
+        // Alternative form
+        // window.scroll({
+        //     top: topo,
+        //     behavior: 'smooth'
+        // });
+    }
+
+    linksInternos.forEach((link) => {
+        link.addEventListener('click', scrollToSection);
+    });
+}
+
+initSmoothScroll();
